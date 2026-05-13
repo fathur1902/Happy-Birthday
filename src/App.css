@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+/* Konfigurasi Tema Tailwind v4 */
+@theme {
+  /* Mengganti font sans default menjadi Comic Sans agar lucu/imut */
+  --font-sans: "Comic Sans MS", "Nunito", sans-serif;
+
+  /* Menambahkan warna custom jika perlu, tapi kita pakai warna default pink/rose saja */
+}
+
+/* Reset CSS dasar */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+  background-color: #fdf2f8; /* bg-pink-50 */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
