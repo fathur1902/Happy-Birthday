@@ -281,8 +281,7 @@ export default function App() {
             >
               <span className="bg-white/90 px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm border border-pink-200 shadow-md">
                 <BookHeart size={18} className="text-pink-500" />
-                {/* IMPLEMENTASI SPLITTEXT PADA JUDUL FLIPBOOK */}
-                <SplitText text="Coba liat ya bub hehe😘" delay={40} />
+                <SplitText text="Coba liat ya bub hehe" delay={40} />
               </span>
             </motion.div>
 
@@ -324,7 +323,6 @@ export default function App() {
 
                   {isCurrent && (
                     <div className="absolute bottom-4 right-4">
-                      {/* IMPLEMENTASI MAGNET PADA TOMBOL NEXT */}
                       <Magnet>
                         <div className="bg-rose-500 p-3 rounded-full text-white shadow-[0_0_15px_rgba(244,63,94,0.6)] animate-pulse hover:animate-none">
                           <ChevronRight />
@@ -476,6 +474,19 @@ export default function App() {
                   Dibuat dengan kondisi badan yang sedikit sakit
                 </p>
                 <p className="text-sm text-gray-500 italic">from ur love</p>
+              </motion.div>
+
+              {/* === TAMBAHAN KETERANGAN BACA BUKU KECIL === */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 10.5, type: "spring", bounce: 0.5 }}
+                className="mt-8 flex justify-center"
+              >
+                <span className="inline-flex items-center gap-2 bg-pink-100 text-pink-600 px-5 py-3 rounded-full font-bold text-sm sm:text-base shadow-sm border border-pink-200">
+                  <BookHeart size={18} className="animate-bounce" />
+                  Habis ini, baca buku kecilku ya bub
+                </span>
               </motion.div>
             </motion.div>
           </>
